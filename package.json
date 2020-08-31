@@ -1,0 +1,9 @@
+{
+  "name": "PasswordSafeModule",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "MIT",
+  "dependencies": {
+    "@gnosis.pm/safe-contracts": "^1.1.1-dev.2"
+  }
+}
