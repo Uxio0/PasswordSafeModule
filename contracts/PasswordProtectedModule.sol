@@ -56,8 +56,8 @@ contract PasswordSafeModule is Module {
         // require(block.number - approvedHashes[approvedHash] > 5760, "A day has not passed since the approvedHash was created");
         require(passwordHash != newPasswordHash, "New password must be different from the old one");
 
-        require(manager.execTransactionFromModule(to, 0, data, Enum.Operation.Call), "Could not execute password protected transaction");
         passwordHash = newPasswordHash;
+        require(manager.execTransactionFromModule(to, 0, data, Enum.Operation.Call), "Could not execute password protected transaction");
     }
 
 
